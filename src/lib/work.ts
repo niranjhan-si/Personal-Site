@@ -17,14 +17,6 @@ export const WORK_PROJECTS: WorkProject[] = [
     live: false,
   },
   {
-    name: "BackItOrBinIt",
-    company: "Betfair",
-    description:
-      "A free-to-play sports prediction game where user predictions are mapped to live bets on Betfair.",
-    url: "https://backitorbinit.betfair.com/",
-    live: true,
-  },
-  {
     name: "Superswipes",
     company: "Sky Bet",
     description:
@@ -32,6 +24,14 @@ export const WORK_PROJECTS: WorkProject[] = [
     url: "https://superswipes.skybet.com/",
     live: true,
     video: "/videos/superswipes-demo.mp4",
+  },
+  {
+    name: "BackItOrBinIt",
+    company: "Betfair",
+    description:
+      "A free-to-play sports prediction game where user predictions are mapped to live bets on Betfair.",
+    url: "https://backitorbinit.betfair.com/",
+    live: true,
   },
   {
     name: "ITV7 Football",
