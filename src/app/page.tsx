@@ -7,7 +7,9 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight">Hi, I&apos;m Niranjhan.</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">
+          Product, systems, and agentic AI.
+        </h1>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
           At work, I spend my time figuring out how to turn complex systems into effortless
           habits. Currently, that looks like building platforms, gamification loops, and

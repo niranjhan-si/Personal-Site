@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -15,13 +15,13 @@ const THEME_INIT_SCRIPT = `
 })();
 `;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-heading",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
@@ -53,17 +53,35 @@ export const metadata: Metadata = {
   },
 };
 
+const PERSON_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE_NAME,
+  url: "https://niranjhan.com",
+  jobTitle: "Product Manager",
+  worksFor: { "@type": "Organization", name: "Flutter Entertainment" },
+  sameAs: [
+    "https://github.com/niranjhan-si",
+    "https://www.linkedin.com/in/niranjhan-sivakumar/",
+    "https://niranjhan.substack.com/",
+  ],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         <Script id="theme-init" strategy="beforeInteractive">
           {THEME_INIT_SCRIPT}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
+        />
         <Header />
         <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">{children}</main>
         <Footer />
