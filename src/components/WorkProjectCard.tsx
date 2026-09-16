@@ -25,7 +25,7 @@ export default function WorkProjectCard({ project }: { project: WorkProject }) {
             controls
             playsInline
             preload="metadata"
-            className="mt-2 w-full rounded-md"
+            className="mt-2 max-h-80 w-auto max-w-full rounded-md"
           />
         )}
       </div>
