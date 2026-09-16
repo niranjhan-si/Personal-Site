@@ -5,6 +5,7 @@ import { WORK_PROJECTS } from "@/lib/work";
 import SubstackPostCard from "@/components/SubstackPostCard";
 import GithubProjectCard from "@/components/GithubProjectCard";
 import WorkProjectCard from "@/components/WorkProjectCard";
+import ScrollRow from "@/components/ScrollRow";
 
 export default async function Home() {
   const [posts, projects] = await Promise.all([
@@ -44,7 +45,7 @@ export default async function Home() {
               View all →
             </Link>
           </div>
-          <ul className="flex gap-4 overflow-x-auto p-1 -m-1 snap-x snap-mandatory">
+          <ScrollRow>
             {work.map((project) => (
               <WorkProjectCard
                 key={project.name}
@@ -52,7 +53,7 @@ export default async function Home() {
                 className="w-80 shrink-0 snap-start"
               />
             ))}
-          </ul>
+          </ScrollRow>
         </div>
       )}
 
@@ -64,7 +65,7 @@ export default async function Home() {
               View all →
             </Link>
           </div>
-          <ul className="flex gap-4 overflow-x-auto p-1 -m-1 snap-x snap-mandatory">
+          <ScrollRow>
             {projects.map((project) => (
               <GithubProjectCard
                 key={project.url}
@@ -72,7 +73,7 @@ export default async function Home() {
                 className="w-80 shrink-0 snap-start"
               />
             ))}
-          </ul>
+          </ScrollRow>
         </div>
       )}
 
@@ -84,7 +85,7 @@ export default async function Home() {
               View all →
             </Link>
           </div>
-          <ul className="flex gap-4 overflow-x-auto p-1 -m-1 snap-x snap-mandatory">
+          <ScrollRow>
             {posts.map((post) => (
               <SubstackPostCard
                 key={post.link}
@@ -92,7 +93,7 @@ export default async function Home() {
                 className="w-80 shrink-0 snap-start"
               />
             ))}
-          </ul>
+          </ScrollRow>
         </div>
       )}
     </div>
