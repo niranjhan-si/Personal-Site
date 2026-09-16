@@ -20,7 +20,7 @@ export default async function Home() {
           Product, systems, and agentic AI.
         </h1>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
-          Hello 👋 I&apos;m Niranjhan, and I&apos;m glad you stopped by. At work, I spend my
+          Hello! 👋 I&apos;m Niranjhan, and I&apos;m glad you stopped by. At work, I spend my
           time turning complex systems into effortless habits. For me that usually means
           building platforms, gamification loops, and agentic AI at Flutter Entertainment.
         </p>
@@ -59,7 +59,7 @@ export default async function Home() {
       {projects.length > 0 && (
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold tracking-tight">Recent projects</h2>
+            <h2 className="text-xl font-semibold tracking-tight">Recent Projects</h2>
             <Link href="/projects" className="text-sm hover:underline">
               View all →
             </Link>
