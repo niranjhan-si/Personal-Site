@@ -28,13 +28,14 @@ export default function WorkProjectCard({
         </a>
 
         {project.video && (
-          <video
-            src={project.video}
-            controls
-            playsInline
-            preload="metadata"
-            className="mt-2 max-h-80 w-auto max-w-full rounded-md"
-          />
+          <a
+            href={project.video}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 inline-flex w-fit items-center gap-1.5 rounded-full border border-black/15 px-3 py-1 text-sm text-black/70 transition-colors hover:border-black/40 hover:text-black dark:border-white/15 dark:text-white/70 dark:hover:border-white/40 dark:hover:text-white"
+          >
+            ▶ Watch demo
+          </a>
         )}
       </div>
     </li>

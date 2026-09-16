@@ -44,7 +44,7 @@ export default async function Home() {
               View all →
             </Link>
           </div>
-          <ul className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory">
+          <ul className="flex gap-4 overflow-x-auto p-1 -m-1 snap-x snap-mandatory">
             {work.map((project) => (
               <WorkProjectCard
                 key={project.name}
@@ -64,7 +64,7 @@ export default async function Home() {
               View all →
             </Link>
           </div>
-          <ul className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory">
+          <ul className="flex gap-4 overflow-x-auto p-1 -m-1 snap-x snap-mandatory">
             {projects.map((project) => (
               <GithubProjectCard
                 key={project.url}
@@ -84,7 +84,7 @@ export default async function Home() {
               View all →
             </Link>
           </div>
-          <ul className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory">
+          <ul className="flex gap-4 overflow-x-auto p-1 -m-1 snap-x snap-mandatory">
             {posts.map((post) => (
               <SubstackPostCard
                 key={post.link}
