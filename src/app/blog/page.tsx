@@ -1,4 +1,5 @@
 import { getSubstackPosts } from "@/lib/substack";
+import SubstackPostCard from "@/components/SubstackPostCard";
 
 export default async function Blog() {
   const posts = await getSubstackPosts(50);
@@ -20,22 +21,9 @@ export default async function Blog() {
           .
         </p>
       ) : (
-        <ul className="flex flex-col gap-6">
+        <ul className="flex flex-col gap-4">
           {posts.map((post) => (
-            <li key={post.link}>
-              <a
-                href={post.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lg font-medium hover:underline"
-              >
-                {post.title}
-              </a>
-              <p className="text-sm text-black/60 dark:text-white/60">
-                {new Date(post.pubDate).toLocaleDateString()}
-              </p>
-              <p className="text-black/70 dark:text-white/70">{post.description}</p>
-            </li>
+            <SubstackPostCard key={post.link} post={post} />
           ))}
         </ul>
       )}
