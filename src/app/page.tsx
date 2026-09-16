@@ -1,9 +1,14 @@
 import Link from "next/link";
 import { getSubstackPosts } from "@/lib/substack";
+import { getGithubProjects } from "@/lib/github";
 import SubstackPostCard from "@/components/SubstackPostCard";
+import GithubProjectCard from "@/components/GithubProjectCard";
 
 export default async function Home() {
-  const posts = await getSubstackPosts(3);
+  const [posts, projects] = await Promise.all([
+    getSubstackPosts(3),
+    getGithubProjects(3),
+  ]);
 
   return (
     <div className="flex flex-col gap-12">
@@ -39,6 +44,22 @@ export default async function Home() {
           <ul className="flex flex-col gap-4">
             {posts.map((post) => (
               <SubstackPostCard key={post.link} post={post} />
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {projects.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold tracking-tight">Recent projects</h2>
+            <Link href="/projects" className="text-sm hover:underline">
+              View all →
+            </Link>
+          </div>
+          <ul className="flex flex-col gap-4">
+            {projects.map((project) => (
+              <GithubProjectCard key={project.url} project={project} />
             ))}
           </ul>
         </div>
