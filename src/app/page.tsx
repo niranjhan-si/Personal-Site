@@ -1,14 +1,17 @@
 import Link from "next/link";
 import { getSubstackPosts } from "@/lib/substack";
 import { getGithubProjects } from "@/lib/github";
+import { WORK_PROJECTS } from "@/lib/work";
 import SubstackPostCard from "@/components/SubstackPostCard";
 import GithubProjectCard from "@/components/GithubProjectCard";
+import WorkProjectCard from "@/components/WorkProjectCard";
 
 export default async function Home() {
   const [posts, projects] = await Promise.all([
     getSubstackPosts(3),
     getGithubProjects(3),
   ]);
+  const work = WORK_PROJECTS.slice(0, 3);
 
   return (
     <div className="flex flex-col gap-12">
@@ -32,6 +35,22 @@ export default async function Home() {
           reach out if something here resonates.
         </p>
       </div>
+
+      {work.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold tracking-tight">Work</h2>
+            <Link href="/work" className="text-sm hover:underline">
+              View all →
+            </Link>
+          </div>
+          <ul className="flex flex-col gap-4">
+            {work.map((project) => (
+              <WorkProjectCard key={project.name} project={project} />
+            ))}
+          </ul>
+        </div>
+      )}
 
       {projects.length > 0 && (
         <div className="flex flex-col gap-4">
