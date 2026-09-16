@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { getSubstackPosts } from "@/lib/substack";
 
 export default async function Home() {
-  const posts = await getSubstackPosts();
+  const posts = await getSubstackPosts(3);
 
   return (
     <div className="flex flex-col gap-12">
@@ -26,7 +27,12 @@ export default async function Home() {
 
       {posts.length > 0 && (
         <div className="flex flex-col gap-4">
-          <h2 className="text-xl font-semibold tracking-tight">Latest from Substack</h2>
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold tracking-tight">Latest from Substack</h2>
+            <Link href="/blog" className="text-sm hover:underline">
+              View all →
+            </Link>
+          </div>
           <ul className="flex flex-col gap-6">
             {posts.map((post) => (
               <li key={post.link}>
