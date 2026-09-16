@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import SocialLinks from "./SocialLinks";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -26,6 +27,7 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <SocialLinks className="border-l border-black/10 pl-6 dark:border-white/10" />
           <ThemeToggle />
         </nav>
 
@@ -50,6 +52,7 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <SocialLinks className="pt-2" />
         </nav>
       )}
     </header>
