@@ -33,22 +33,6 @@ export default async function Home() {
         </p>
       </div>
 
-      {posts.length > 0 && (
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold tracking-tight">Latest from Substack</h2>
-            <Link href="/blog" className="text-sm hover:underline">
-              View all →
-            </Link>
-          </div>
-          <ul className="flex flex-col gap-4">
-            {posts.map((post) => (
-              <SubstackPostCard key={post.link} post={post} />
-            ))}
-          </ul>
-        </div>
-      )}
-
       {projects.length > 0 && (
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
@@ -60,6 +44,22 @@ export default async function Home() {
           <ul className="flex flex-col gap-4">
             {projects.map((project) => (
               <GithubProjectCard key={project.url} project={project} />
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {posts.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold tracking-tight">Latest from Substack</h2>
+            <Link href="/blog" className="text-sm hover:underline">
+              View all →
+            </Link>
+          </div>
+          <ul className="flex flex-col gap-4">
+            {posts.map((post) => (
+              <SubstackPostCard key={post.link} post={post} />
             ))}
           </ul>
         </div>

@@ -2,7 +2,7 @@ import type { GithubProject } from "@/lib/github";
 
 export default function GithubProjectCard({ project }: { project: GithubProject }) {
   return (
-    <li className="rounded-lg border border-black/10 p-5 transition-colors hover:border-black/25 dark:border-white/10 dark:hover:border-white/25">
+    <li className="rounded-lg border border-black/10 p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/40 hover:shadow-lg dark:border-white/10 dark:hover:border-white/40 dark:hover:shadow-white/5">
       <a href={project.url} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-2">
         <h3 className="font-heading text-xl font-semibold group-hover:underline">
           {project.name}
