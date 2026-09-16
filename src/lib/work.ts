@@ -9,6 +9,14 @@ export type WorkProject = {
 
 export const WORK_PROJECTS: WorkProject[] = [
   {
+    name: "Project Audience",
+    company: "Junglee Games",
+    description:
+      "An internal no-code platform that lets product, marketing, and retention teams build targeted user journeys and run experiments across channels without developer involvement.",
+    url: "https://www.linkedin.com/pulse/meet-project-audience-our-no-code-swiss-army-knife-product-bharti",
+    live: false,
+  },
+  {
     name: "BackItOrBinIt",
     company: "Betfair",
     description:
@@ -32,13 +40,5 @@ export const WORK_PROJECTS: WorkProject[] = [
       "A free-to-play football prediction game where players can win up to £100,000, with predictions linked to live bets on Sky Bet.",
     url: "https://itv7.itv.com/football",
     live: true,
-  },
-  {
-    name: "Project Audience",
-    company: "Junglee Games",
-    description:
-      "An internal no-code platform that lets product, marketing, and retention teams build targeted user journeys and run experiments across channels without developer involvement.",
-    url: "https://www.linkedin.com/pulse/meet-project-audience-our-no-code-swiss-army-knife-product-bharti",
-    live: false,
   },
 ];
