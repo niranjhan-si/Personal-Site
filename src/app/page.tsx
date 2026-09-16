@@ -17,19 +17,19 @@ export default async function Home() {
           Product, systems, and agentic AI.
         </h1>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
-          At work, I spend my time figuring out how to turn complex systems into effortless
-          habits. Currently, that looks like building platforms, gamification loops, and
-          agentic AI at Flutter Entertainment.
+          Hello 👋 I&apos;m Niranjhan, and I&apos;m glad you stopped by. At work, I spend my
+          time turning complex systems into effortless habits. For me that usually means
+          building platforms, gamification loops, and agentic AI at Flutter Entertainment.
         </p>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
-          My route here wasn&apos;t linear: I started out running thermal simulations on
-          high-voltage power circuits for the U.S. Navy, took a hard detour into consumer
-          culture and brand strategy at MICA, and eventually realized product management is
-          the one place where that split brain actually makes sense.
+          My path here wasn&apos;t a straight line. I started out running thermal simulations
+          on high-voltage power circuits for the U.S. Navy, took a hard detour into consumer
+          culture and brand strategy at MICA, and eventually landed on product management.
         </p>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
-          This site is where I park my working notes, side builds, and occasional deep dives
-          into technology, systems, and human behavior.
+          This site is where I park my working notes, side builds, and the occasional deep
+          dive into technology, systems, and human behavior. Poke around, and feel free to
+          reach out if something here resonates.
         </p>
       </div>
 
