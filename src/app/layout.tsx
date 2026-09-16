@@ -25,11 +25,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_NAME = "Niranjhan Sivakumar";
+const SITE_DESCRIPTION =
+  "Product, systems, and agentic AI — working notes, side builds, and deep dives from Niranjhan Sivakumar.";
+
 export const metadata: Metadata = {
-  title: "yourname",
-  description: "Personal website and blog.",
+  metadataBase: new URL("https://niranjhan.com"),
+  title: {
+    default: SITE_NAME,
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
   alternates: {
     types: { "application/rss+xml": "/rss.xml" },
+  },
+  openGraph: {
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: "https://niranjhan.com",
+    siteName: SITE_NAME,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
   },
 };
 

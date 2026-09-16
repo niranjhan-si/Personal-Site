@@ -8,6 +8,23 @@ export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getAllPosts().find((p) => p.slug === slug);
+  if (!post) return {};
+
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: { title: post.title, description: post.description },
+    twitter: { title: post.title, description: post.description },
+  };
+}
+
 export default async function BlogPost({
   params,
 }: {

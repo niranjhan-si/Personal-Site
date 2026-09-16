@@ -1,6 +1,6 @@
 import { getAllPosts } from "@/lib/posts";
 
-const SITE_URL = "https://example.com";
+const SITE_URL = "https://niranjhan.com";
 
 export function GET() {
   const posts = getAllPosts();
@@ -21,9 +21,9 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>yourname</title>
+    <title>Niranjhan Sivakumar</title>
     <link>${SITE_URL}</link>
-    <description>Personal website and blog.</description>
+    <description>Product, systems, and agentic AI — working notes from Niranjhan Sivakumar.</description>
     ${items}
   </channel>
 </rss>`;

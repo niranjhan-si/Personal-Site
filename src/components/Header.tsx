@@ -17,7 +17,7 @@ export default function Header() {
     <header className="border-b border-black/10 dark:border-white/10">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
         <Link href="/" className="text-lg font-semibold" onClick={() => setOpen(false)}>
-          yourname
+          Niranjhan Sivakumar
         </Link>
 
         <nav className="hidden items-center gap-6 sm:flex">
