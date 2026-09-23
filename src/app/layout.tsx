@@ -27,7 +27,7 @@ const inter = Inter({
 
 const SITE_NAME = "Niranjhan Sivakumar";
 const SITE_DESCRIPTION =
-  "Product, systems, and agentic AI — working notes, side builds, and deep dives from Niranjhan Sivakumar.";
+  "Product, systems, and agentic AI. Working notes, side builds, and deep dives from Niranjhan Sivakumar.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://niranjhan.com"),

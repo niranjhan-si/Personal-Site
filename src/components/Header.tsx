@@ -27,23 +27,23 @@ export default function Header() {
           Niranjhan Sivakumar
         </Link>
 
-        <nav className="hidden items-center gap-6 sm:flex">
-          {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm hover:underline">
-              {link.label}
-            </Link>
-          ))}
-          <SocialLinks className="border-l border-black/10 pl-6 dark:border-white/10" />
-          <ThemeToggle />
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="hidden items-center gap-6 sm:flex">
+            {NAV_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="text-sm hover:underline">
+                {link.label}
+              </Link>
+            ))}
+            <SocialLinks className="border-l border-black/10 pl-6 dark:border-white/10" />
+          </nav>
 
-        <div className="flex items-center gap-4 sm:hidden">
           <ThemeToggle />
+
           <button
             type="button"
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="text-2xl leading-none"
+            className="text-2xl leading-none sm:hidden"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? "✕" : "☰"}

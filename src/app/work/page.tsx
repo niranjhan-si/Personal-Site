@@ -1,7 +1,11 @@
 import { WORK_PROJECTS } from "@/lib/work";
 import WorkProjectCard from "@/components/WorkProjectCard";
 
-export const metadata = { title: "Work" };
+export const metadata = {
+  title: "Work",
+  description:
+    "Products I've shipped: Project Audience, Superswipes, and BackItOrBinIt — engagement platforms and free-to-play games at Flutter Entertainment.",
+};
 
 export default function Work() {
   return (

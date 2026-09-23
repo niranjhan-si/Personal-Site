@@ -1,6 +1,12 @@
 const USERNAME = "niranjhan-si";
 const EXCLUDE_REPOS = new Set(["Personal-Site"]);
 
+const WRITEUP_URLS: Record<string, string> = {
+  miniRAG: "https://niranjhan.substack.com/p/i-built-a-local-rag-pipeline-to-avoid",
+  notesMCP: "https://niranjhan.substack.com/p/connecting-my-apple-notes-to-claude",
+  TinyTabTimer: "https://niranjhan.substack.com/p/tinytabtimer",
+};
+
 export type GithubProject = {
   name: string;
   description: string | null;
@@ -8,6 +14,7 @@ export type GithubProject = {
   language: string | null;
   stars: number;
   pushedAt: string;
+  writeupUrl?: string;
 };
 
 export async function getGithubProjects(limit = 6): Promise<GithubProject[]> {
@@ -38,6 +45,7 @@ export async function getGithubProjects(limit = 6): Promise<GithubProject[]> {
         language: r.language,
         stars: r.stargazers_count,
         pushedAt: r.pushed_at,
+        writeupUrl: WRITEUP_URLS[r.name],
       }));
   } catch {
     return [];

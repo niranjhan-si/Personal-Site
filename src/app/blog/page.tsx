@@ -1,6 +1,11 @@
 import { getSubstackPosts } from "@/lib/substack";
 import SubstackPostCard from "@/components/SubstackPostCard";
 
+export const metadata = {
+  title: "Blog",
+  description: "Working notes on product, AI agents, and systems, cross-posted from Substack.",
+};
+
 export default async function Blog() {
   const posts = await getSubstackPosts(50);
 

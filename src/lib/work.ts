@@ -12,7 +12,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     name: "Project Audience",
     company: "Junglee Games",
     description:
-      "An internal no-code platform that lets product, marketing, and retention teams build targeted user journeys and run experiments across channels without developer involvement.",
+      "I own the roadmap for Audience, an internal no-code platform that lets product, marketing, and retention teams build targeted user journeys and run experiments across channels without developer involvement. It supports 100M+ users and hundreds of concurrent A/B experiments, with vendor integrations and automated approval workflows.",
     url: "https://www.linkedin.com/pulse/meet-project-audience-our-no-code-swiss-army-knife-product-bharti",
     live: false,
   },
@@ -20,7 +20,7 @@ export const WORK_PROJECTS: WorkProject[] = [
     name: "Superswipes",
     company: "Sky Bet",
     description:
-      "A free-to-play, Tinder-style swipe game with gamified reward mechanics, where user predictions are linked to live bets on Sky Bet.",
+      "A free-to-play, Tinder-style swipe game with gamified reward mechanics like dynamic leaderboards, streak rewards, and prize ladders, where user predictions are linked to live bets on Sky Bet.",
     url: "https://superswipes.skybet.com/",
     live: true,
     video: "/videos/superswipes-demo.mp4",

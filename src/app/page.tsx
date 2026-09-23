@@ -1,10 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getSubstackPosts } from "@/lib/substack";
 import { getGithubProjects } from "@/lib/github";
 import { WORK_PROJECTS } from "@/lib/work";
 import SubstackPostCard from "@/components/SubstackPostCard";
 import GithubProjectCard from "@/components/GithubProjectCard";
 import WorkProjectCard from "@/components/WorkProjectCard";
+
+export const metadata = {
+  title: "Niranjhan Sivakumar — Product Manager, AI & Platforms",
+  description:
+    "Product Manager at Junglee Games (Flutter Entertainment). Building engagement platforms, gamification, and agentic AI. Working notes and side builds.",
+};
 
 export default async function Home() {
   const [posts, projects] = await Promise.all([
@@ -16,18 +23,27 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4">
+        <Image
+          src="/images/niranjhan.png"
+          alt="Niranjhan Sivakumar"
+          width={96}
+          height={96}
+          className="rounded-full"
+          priority
+        />
         <h1 className="text-3xl font-semibold tracking-tight">
           Product, systems, and agentic AI.
         </h1>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
-          Hello! 👋 I&apos;m Niranjhan, and I&apos;m glad you stopped by. At work, I spend my
-          time turning complex systems into effortless habits. For me that usually means
-          building platforms, gamification loops, and agentic AI at Flutter Entertainment.
+          Hello! 👋 I&apos;m Niranjhan, and I&apos;m glad you stopped by. I&apos;m a Product
+          Manager at Junglee Games (Flutter Entertainment) in Bengaluru, where I spend my time
+          turning complex systems into effortless habits.
         </p>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
-          My path here wasn&apos;t a straight line. I started out running thermal simulations
-          on high-voltage power circuits for the U.S. Navy, took a hard detour into consumer
-          culture and brand strategy at MICA, and eventually landed on product management.
+          My path here wasn&apos;t a straight line. I started out engineering gate-driver
+          circuits and thermal dissipation models for a U.S. Navy power electronics project,
+          took a hard detour into consumer culture and brand strategy at MICA, and eventually
+          landed on product management.
         </p>
         <p className="max-w-2xl text-black/70 dark:text-white/70">
           This site is where I park my working notes, side builds, and the occasional deep

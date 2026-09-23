@@ -1,7 +1,11 @@
 import { getGithubProjects } from "@/lib/github";
 import GithubProjectCard from "@/components/GithubProjectCard";
 
-export const metadata = { title: "Projects" };
+export const metadata = {
+  title: "Projects",
+  description:
+    "Side builds: an MCP server for Apple Notes, a local RAG pipeline, and a multi-agent content pipeline with a measurement harness.",
+};
 
 export default async function Projects() {
   const projects = await getGithubProjects(50);
